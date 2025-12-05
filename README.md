@@ -97,3 +97,38 @@ g++ -std=c++17 -Wall -Wextra -o library.exe main.cpp LibrarySystem.cpp
 library.exe
 ```
 
+
+---
+
+## Примерен изход (Example Output)
+```
+--- Initializing Library ---
+Current live books: 0
+Current live books (after adding to vector): 6
+
+=== Library Status ===
+Total Books in Collection: 3
+Total Members: 2
+Total Loans (History): 0
+Active Loans: 0
+Global Book Instances (Static): 6
+======================
+
+--- Testing Loans ---
+Success: 'Pod igoto' loaned to Petar.
+Loan Failed: Book ISBN-001 is not available or does not exist.
+Expected Fail: 'Pod igoto' is already loaned.
+Is ISBN-001 available? false
+
+--- Testing Returns ---
+Returned ISBN-001.
+Is ISBN-001 available? true
+
+--- Search for 'Vazov' ---
+'Pod igoto' by Ivan Vazov, 1894, $25.50 [ISBN: ISBN-001]
+'Nema zemya' by Ivan Vazov, 1900, $18.90 [ISBN: ISBN-002]
+
+--- Rule of 5 Scope Test ---
+Inside scope live books: 9
+Outside scope live books: 8
+```
